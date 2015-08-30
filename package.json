@@ -13,5 +13,8 @@
     "broccoli-dist-es6-module": "^0.2.1",
     "broccoli-funnel": "^0.2.8",
     "broccoli-merge-trees": "^0.2.3"
-  }
+  },
+  "keywords": [
+    "d3-plugins", "amd", "named-amd", "cjs"
+  ]
 }
