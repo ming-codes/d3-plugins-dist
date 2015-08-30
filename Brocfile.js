@@ -4,7 +4,7 @@ var funnel = require('broccoli-funnel');
 var merge = require('broccoli-merge-trees');
 var path = require('path');
 
-module.exports = merge([ 'sankey', 'lasso', 'bullet', 'hive' ].map(buildPlugin));
+module.exports = merge([ 'sankey', 'lasso', 'bullet', 'hive', 'adjacency-matrix' ].map(buildPlugin));
 
 function buildPlugin(name) {
   var srcPath = path.join('lib', name);
