@@ -25,6 +25,12 @@ branches will be tagged with version.
 `npm` module will contain all plugin distributions. If you only need individual plugin, please
 reference it by git repo.
 
+# Contributing
+
+If you found bug in any of the plugins, please open issue in the original plugin's repo
+and create an issue in this repo referencing the issue. Distribution will be updated
+after the original's bug is addressed.
+
 # Licensing
 
 Each individual plugin's author owns their own work. If you do not like your plugin published this
