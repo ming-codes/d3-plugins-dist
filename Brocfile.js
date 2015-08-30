@@ -4,33 +4,7 @@ var funnel = require('broccoli-funnel');
 var merge = require('broccoli-merge-trees');
 var path = require('path');
 
-var plugins = [
-  'adjacency-matrix',
-  'box',
-  'bullet',
-  //chernoff/
-  //cubehelix/
-  'fisheye',
-  //force_labels/
-  //geo/
-  //geodesic/
-  //geom/
-  //graph/
-  'hexbin',
-  'hive',
-  //horizon/
-  //interpolate-zoom/
-  //jsonp/
-  //keybinding/
-  'lasso',
-  //longscroll/
-  //qq/
-  //rollup/
-  'sankey',
-  //simplify/
-  //superformula/
-  //urlencode/
-];
+var plugins = require('./modules');
 
 module.exports = merge(plugins.map(buildPlugin));
 
