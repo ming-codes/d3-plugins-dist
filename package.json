@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ming Liu",
+  "repository": "https://github.com/lightblade/d3-plugins-dist.git",
+  "homepage": "https://github.com/lightblade/d3-plugins-dist",
   "license": "MIT",
   "devDependencies": {
     "broccoli": "^0.16.7",
