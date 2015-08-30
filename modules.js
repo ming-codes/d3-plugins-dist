@@ -13,7 +13,7 @@ module.exports = [
   //graph/
   'hexbin',
   'hive',
-  //horizon/
+  'horizon',
   //interpolate-zoom/
   //jsonp/
   //keybinding/
