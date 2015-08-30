@@ -1,5 +1,5 @@
 {
-  "name": "d3-plugin-dist",
+  "name": "d3-plugins-dist",
   "version": "1.0.0",
   "description": "Deployable modules of d3 plugins in all module format",
   "files": [ "dist/", "README.md" ],
