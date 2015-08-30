@@ -22,10 +22,10 @@ function buildPlugin(name) {
     main: name,
 
     // will become window.ic.ajax with the exports from `main`
-    global: 'd3.' + name,
+    global: 'd3.plugins.' + name,
 
     // the prefix for named-amd modules
-    packageName: 'd3/' + name,
+    packageName: 'd3-plugins/' + name,
 
     // global output only: naive shimming, when the id 'ember' is imported,
     // substitute with `window.Ember` instead
