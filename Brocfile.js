@@ -4,7 +4,35 @@ var funnel = require('broccoli-funnel');
 var merge = require('broccoli-merge-trees');
 var path = require('path');
 
-module.exports = merge([ 'sankey', 'lasso', 'bullet', 'hive', 'adjacency-matrix' ].map(buildPlugin));
+var plugins = [
+  'adjacency-matrix',
+  'box',
+  'bullet',
+  //chernoff/
+  //cubehelix/
+  //fisheye/
+  //force_labels/
+  //geo/
+  //geodesic/
+  //geom/
+  //graph/
+  //hexbin/
+  'hive',
+  //horizon/
+  //interpolate-zoom/
+  //jsonp/
+  //keybinding/
+  'lasso',
+  //longscroll/
+  //qq/
+  //rollup/
+  'sankey',
+  //simplify/
+  //superformula/
+  //urlencode/
+];
+
+module.exports = merge(plugins.map(buildPlugin));
 
 function buildPlugin(name) {
   var srcPath = path.join('lib', name);
