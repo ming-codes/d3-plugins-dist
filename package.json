@@ -2,7 +2,7 @@
   "name": "d3-plugin-dist",
   "version": "1.0.0",
   "description": "Deployable modules of d3 plugins in all module format",
-  "main": "index.js",
+  "files": [ "dist/", "README.md" ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
