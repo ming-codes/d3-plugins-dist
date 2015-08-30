@@ -1,0 +1,17 @@
+{
+  "name": "d3-plugin-dist",
+  "version": "1.0.0",
+  "description": "Deployable modules of d3 plugins in all module format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ming Liu",
+  "license": "MIT",
+  "devDependencies": {
+    "broccoli": "^0.16.7",
+    "broccoli-dist-es6-module": "^0.2.1",
+    "broccoli-funnel": "^0.2.8",
+    "broccoli-merge-trees": "^0.2.3"
+  }
+}
