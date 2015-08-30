@@ -10,7 +10,7 @@ var plugins = [
   'bullet',
   //chernoff/
   //cubehelix/
-  //fisheye/
+  'fisheye',
   //force_labels/
   //geo/
   //geodesic/
