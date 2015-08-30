@@ -16,7 +16,7 @@ var plugins = [
   //geodesic/
   //geom/
   //graph/
-  //hexbin/
+  'hexbin',
   'hive',
   //horizon/
   //interpolate-zoom/
