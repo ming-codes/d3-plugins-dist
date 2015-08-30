@@ -1,4 +1,4 @@
-define("d3/sankey",
+define("d3-plugins/sankey",
   ["d3","exports"],
   function(__dependency1__, __exports__) {
     "use strict";

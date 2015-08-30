@@ -11,7 +11,7 @@ function buildPlugin(name) {
 
   var srcTree = funnel(srcPath, {
     srcDir: '/',
-    files: [ name + '.js' ],
+    files: [ name + '.js', 'LICENSE' ],
   });
   var es6Tree = funnel(srcTree, {
     destDir: 'es6'
