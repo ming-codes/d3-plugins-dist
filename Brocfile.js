@@ -4,7 +4,7 @@ var funnel = require('broccoli-funnel');
 var merge = require('broccoli-merge-trees');
 var path = require('path');
 
-var plugins = require('./modules');
+var plugins = require('./index');
 
 module.exports = merge(plugins.map(buildPlugin));
 
