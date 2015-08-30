@@ -1,8 +1,8 @@
 {
   "name": "d3-plugins-dist",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "d3-plugins in all deployable module format (global, amd, named-amd, cjs, es6)",
-  "files": [ "dist/", "README.md" ],
+  "files": [ "dist/", "README.md", "index.js" ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
