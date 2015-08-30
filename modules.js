@@ -19,7 +19,7 @@ module.exports = [
   //keybinding/
   'lasso',
   //longscroll/
-  //qq/
+  'qq',
   //rollup/
   'sankey',
   //simplify/
