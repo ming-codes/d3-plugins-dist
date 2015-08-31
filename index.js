@@ -16,7 +16,7 @@ module.exports = [
   'horizon',
   //interpolate-zoom/ // deprecated
   'jsonp',
-  //keybinding/
+  'keybinding',
   'lasso',
   //longscroll/
   'qq',
