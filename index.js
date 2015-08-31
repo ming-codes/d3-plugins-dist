@@ -18,7 +18,7 @@ module.exports = [
   'jsonp',
   'keybinding',
   'lasso',
-  //longscroll/
+  'longscroll',
   'qq',
   'rollup',
   'sankey',
