@@ -6,7 +6,7 @@ module.exports = [
   //chernoff/
   //cubehelix/
   'fisheye',
-  //force_labels/
+  'force-labels',
   //geo/
   //geodesic/
   //geom/
