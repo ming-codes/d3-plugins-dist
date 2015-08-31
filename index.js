@@ -20,7 +20,7 @@ module.exports = [
   'lasso',
   //longscroll/
   'qq',
-  //rollup/
+  'rollup',
   'sankey',
   //simplify/
   //superformula/
