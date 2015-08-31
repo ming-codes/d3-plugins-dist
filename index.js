@@ -14,8 +14,8 @@ module.exports = [
   'hexbin',
   'hive',
   'horizon',
-  //interpolate-zoom/
-  //jsonp/
+  //interpolate-zoom/ // deprecated
+  'jsonp',
   //keybinding/
   'lasso',
   //longscroll/
