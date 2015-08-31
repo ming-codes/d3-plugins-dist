@@ -3,8 +3,8 @@ module.exports = [
   'adjacency-matrix',
   'box',
   'bullet',
-  //chernoff/
-  //cubehelix/
+  'chernoff',
+  //cubehelix/ exports multiple
   'fisheye',
   'force-labels',
   //geo/
@@ -22,7 +22,7 @@ module.exports = [
   'qq',
   'rollup',
   'sankey',
-  //simplify/
+  //simplify/ // deprecated
   //superformula/
   //urlencode/
 ];
