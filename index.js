@@ -8,7 +8,7 @@ module.exports = [
   'fisheye',
   'force-labels',
   //geo/
-  //geodesic/
+  'geodesic',
   //geom/
   //graph/
   'hexbin',
