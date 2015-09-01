@@ -1,8 +1,8 @@
 
 # d3-plugin-dist
 
-[![npm version](https://badge.fury.io/js/ember-cli-d3.svg)](http://badge.fury.io/js/ember-cli-d3)
-[![devDependency Status](https://david-dm.org/ming-codes/ember-cli-d3/dev-status.svg)](https://david-dm.org/ming-codes/ember-cli-d3#info=devDependencies)
+[![npm version](https://badge.fury.io/js/d3-plugins-dist.svg)](http://badge.fury.io/js/d3-plugins-dist)
+[![devDependency Status](https://david-dm.org/ming-codes/d3-plugins-dist/dev-status.svg)](https://david-dm.org/ming-codes/d3-plugins-dist#info=devDependencies)
 
 This is a repo that collects varies d3 plugins scattered around the web and compiles
 them into a distributable format.
