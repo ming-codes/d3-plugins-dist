@@ -12,7 +12,8 @@ module.exports = {
     'rollup',
     'qq',
     'geodesic',
-    'contour'
+    'contour',
+    'urlencode',
   ],
   'larskotthoff': [
     'chernoff',
@@ -41,5 +42,4 @@ module.exports = {
 //  //interpolate-zoom/ // deprecated
 //  //simplify/ // deprecated
 //  //superformula/
-//  //urlencode/
 //];
