@@ -33,13 +33,15 @@ module.exports = {
   ],
   'prcweb': [
     'circular-heat-chart'
+  ],
+  'deprecated': [
+    'interpolate-zoom'
   ]
 };
 //module.exports = [
 //  //cubehelix/ exports multiple
 //  //geo/
 //  //graph/
-//  //interpolate-zoom/ // deprecated
 //  //simplify/ // deprecated
 //  //superformula/
 //];
