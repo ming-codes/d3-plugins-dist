@@ -1,30 +1,41 @@
 
 module.exports = {
-  'emeeks': 'adjacency-matrix'
+  'emeeks': [ 'adjacency-matrix' ],
+  'mbostock': [
+    'box',
+    'bullet',
+    'fisheye',
+    'hive',
+    'hexbin',
+    'horizon',
+    'sankey',
+    'rollup',
+    'qq',
+    'geodesic',
+  ],
+  'larskotthoff': [
+    'chernoff',
+  ],
+  'skokenes': [
+    'lasso',
+  ],
+  'tmcw': [
+    'jsonp',
+    'keybinding',
+  ],
+  'zjonsson': [
+    'force-labels',
+  ],
+  'jasondavies': [
+    'longscroll',
+  ]
 };
 //module.exports = [
-//  'adjacency-matrix',
-//  'box',
-//  'bullet',
-//  'chernoff',
 //  //cubehelix/ exports multiple
-//  'fisheye',
-//  'force-labels',
 //  //geo/
-//  'geodesic',
 //  //geom/
 //  //graph/
-//  'hexbin',
-//  'hive',
-//  'horizon',
 //  //interpolate-zoom/ // deprecated
-//  'jsonp',
-//  'keybinding',
-//  'lasso',
-//  'longscroll',
-//  'qq',
-//  'rollup',
-//  'sankey',
 //  //simplify/ // deprecated
 //  //superformula/
 //  //urlencode/

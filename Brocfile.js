@@ -4,15 +4,15 @@ var dist = require('broccoli-dist-es6-module');
 var funnel = require('broccoli-funnel');
 var merge = require('broccoli-merge-trees');
 var path = require('path');
+var $reduce = require('lodash/collection/reduce');
 
 var plugins = require('./index');
-var trees = [];
 
-for (var author in plugins) {
-  trees.push(buildPlugin(author, plugins[author]));
-}
-
-module.exports = merge(trees);
+module.exports = merge($reduce(plugins, function (accum, plugins, author) {
+  return accum.concat(plugins.map(function (plugin) {
+    return buildPlugin(author, plugin);
+  }));
+}, []));
 
 function buildPlugin(author, plugin) {
   var globalName = 'd3.plugins.' + author + '.' + plugin;
