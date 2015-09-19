@@ -28,6 +28,9 @@ module.exports = {
   ],
   'jasondavies': [
     'longscroll',
+  ],
+  'prcweb': [
+    'circular-heat-chart'
   ]
 };
 //module.exports = [
