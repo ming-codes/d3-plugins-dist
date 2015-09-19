@@ -14,6 +14,7 @@ module.exports = {
     'geodesic',
     'contour',
     'urlencode',
+    'superformula',
   ],
   'larskotthoff': [
     'chernoff',
@@ -42,6 +43,4 @@ module.exports = {
 //  //cubehelix/ exports multiple
 //  //geo/
 //  //graph/
-//  //simplify/ // deprecated
-//  //superformula/
 //];
