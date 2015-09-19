@@ -12,6 +12,7 @@ module.exports = {
     'rollup',
     'qq',
     'geodesic',
+    'contour'
   ],
   'larskotthoff': [
     'chernoff',
@@ -36,7 +37,6 @@ module.exports = {
 //module.exports = [
 //  //cubehelix/ exports multiple
 //  //geo/
-//  //geom/
 //  //graph/
 //  //interpolate-zoom/ // deprecated
 //  //simplify/ // deprecated
