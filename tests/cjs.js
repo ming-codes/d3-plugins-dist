@@ -25,8 +25,8 @@ module.exports = function (author, plugin) {
     var module = { exports: exports, require: require };
     var window = runScript(path.join('dist', author, plugin, 'cjs', plugin + '.js'), module);
 
-    it('should export default', function () {
-      expect(exports['default']).to.exist;
+    it('should export at least 1 item', function () {
+      expect(Object.keys(exports)).to.have.length.above(0);
     });
   };
 };
