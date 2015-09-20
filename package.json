@@ -1,6 +1,6 @@
 {
   "name": "d3-plugins-dist",
-  "version": "1.2.1",
+  "version": "2.0.0",
   "description": "d3-plugins in all deployable module format (global, amd, named-amd, cjs, es6)",
   "files": [
     "dist/",
