@@ -1,4 +1,6 @@
 
+var plugins = require('../index');
+
 var path = require('path');
 
 var chai = require('chai');
@@ -9,11 +11,15 @@ var d3 = require('d3');
 var camelCase = require('./utils').camelCase;
 var runScript = require('./utils').runScript;
 
+var d3props = Object.keys(d3);
+
 module.exports = function (author, plugin) {
   var namespace = 'd3.plugins.' + camelCase(author) + '.' + camelCase(plugin);
 
   return function () {
-    var context = runScript(path.join('dist', author, plugin, 'globals', 'main.js'));
+    var context = runScript(path.join('dist', author, plugin, 'globals', 'main.js'), {
+      d3: d3
+    });
 
     it('should have module in namespace ' + namespace, function () {
       expect(context)
@@ -29,13 +35,14 @@ module.exports = function (author, plugin) {
     });
 
     it('should not corrupt d3 namespace', function () {
+      // chernoff is the only one don't have d3.plugins
       expect(context.d3)
-        .to.have.all.keys([ 'plugins' ]);
+        .to.have.all.keys(d3props.concat('plugins'));
     });
 
     it('should not corrupt ' + author + ' namespace', function () {
       expect(context.d3.plugins)
-        .to.have.all.keys([ author ]);
+        .to.have.all.keys(Object.keys(plugins));
     });
   };
 }
