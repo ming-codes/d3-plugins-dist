@@ -25,10 +25,10 @@ module.exports = {
     'contour',
     'urlencode',
     'superformula',
-    'cubehelix'
+    'cubehelix',
+    'tile'
   ],
 };
 //module.exports = [
 //  //geo/
-//  //graph/
 //];
