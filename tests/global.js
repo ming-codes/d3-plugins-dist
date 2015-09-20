@@ -13,12 +13,7 @@ module.exports = function (author, plugin) {
   var namespace = 'd3.plugins.' + camelCase(author) + '.' + camelCase(plugin);
 
   return function () {
-    var context = {};
-
-    context.window = context;
-    context.d3 = Object.freeze(d3);
-    context = Object.freeze(context);
-    context = runScript(path.join('dist', author, plugin, 'globals', 'main.js'), context);
+    var context = runScript(path.join('dist', author, plugin, 'globals', 'main.js'));
 
     it('should have module in namespace ' + namespace, function () {
       expect(context)

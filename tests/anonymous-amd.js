@@ -17,7 +17,7 @@ module.exports = function (author, plugin) {
 
         var resolvedDeps = deps.map(function (dep) {
           if (dep === 'd3') {
-            return Object.freeze(d3);
+            return d3;
           }
           else if (dep === 'exports') {
             return {};

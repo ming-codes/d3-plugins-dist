@@ -17,7 +17,6 @@ module.exports.runScript = function runScript(filePath, context) {
 
   context = context || {};
   context.window = context;
-  context = Object.freeze(context);
 
   script.runInNewContext(context);
 

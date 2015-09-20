@@ -13,7 +13,7 @@ module.exports = function (author, plugin) {
     var exports = {};
     var require = function (dep) {
       if (dep === 'd3') {
-        return Object.freeze(d3);
+        return d3;
       }
       else if (dep === 'exports') {
         return {};
@@ -22,7 +22,7 @@ module.exports = function (author, plugin) {
         throw 'Unexpected dependency ' + dep;
       }
     };
-    var module = Object.freeze({ exports: exports, require: require });
+    var module = { exports: exports, require: require };
     var window = runScript(path.join('dist', author, plugin, 'cjs', plugin + '.js'), module);
 
     it('should export default', function () {
