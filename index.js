@@ -1,6 +1,13 @@
 
 module.exports = {
+  'larskotthoff': [ 'chernoff' ],
+  'skokenes': [ 'lasso' ],
+  'tmcw': [ 'jsonp', 'keybinding' ],
+  'zjonsson': [ 'force-labels' ],
+  'prcweb': [ 'circular-heat-chart' ],
+  'deprecated': [ 'interpolate-zoom' ],
   'emeeks': [ 'adjacency-matrix' ],
+  'jasondavies': [ 'longscroll' ],
   'mbostock': [
     'box',
     'bullet',
@@ -16,28 +23,6 @@ module.exports = {
     'urlencode',
     'superformula',
   ],
-  'larskotthoff': [
-    'chernoff',
-  ],
-  'skokenes': [
-    'lasso',
-  ],
-  'tmcw': [
-    'jsonp',
-    'keybinding',
-  ],
-  'zjonsson': [
-    'force-labels',
-  ],
-  'jasondavies': [
-    'longscroll',
-  ],
-  'prcweb': [
-    'circular-heat-chart'
-  ],
-  'deprecated': [
-    'interpolate-zoom'
-  ]
 };
 //module.exports = [
 //  //cubehelix/ exports multiple

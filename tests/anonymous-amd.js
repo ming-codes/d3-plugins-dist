@@ -4,6 +4,8 @@ var path = require('path');
 var chai = require('chai');
 var expect = chai.expect;
 
+var d3 = require('d3');
+
 var camelCase = require('./utils').camelCase;
 var runScript = require('./utils').runScript;
 
@@ -15,7 +17,7 @@ module.exports = function (author, plugin) {
 
         var resolvedDeps = deps.map(function (dep) {
           if (dep === 'd3') {
-            return Object.freeze({});
+            return Object.freeze(d3);
           }
           else if (dep === 'exports') {
             return {};

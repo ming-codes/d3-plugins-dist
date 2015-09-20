@@ -8,15 +8,17 @@ var $reduce = require('lodash/collection/reduce');
 
 var plugins = require('./index');
 
+var camelCase = require('./tests/utils').camelCase;
+
 module.exports = merge($reduce(plugins, function (accum, plugins, author) {
   return accum.concat(plugins.map(function (plugin) {
-    return buildPlugin(author, plugin);
+    return buildDistTree(author, plugin);
   }));
 }, []));
 
-function buildPlugin(author, plugin) {
-  var globalName = 'd3.plugins.' + author + '.' + plugin;
+function buildDistTree(author, plugin) {
   var packageName = 'd3-plugins/' + author + '/' + plugin;
+  var globalName = 'd3.plugins.' + camelCase(author) + '.' + camelCase(plugin);
 
   var pluginBasePath = path.join('lib', author, plugin);
 

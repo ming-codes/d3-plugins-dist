@@ -4,6 +4,8 @@ var path = require('path');
 var chai = require('chai');
 var expect = chai.expect;
 
+var d3 = require('d3');
+
 var camelCase = require('./utils').camelCase;
 var runScript = require('./utils').runScript;
 
@@ -14,7 +16,7 @@ module.exports = function (author, plugin) {
     var context = {};
 
     context.window = context;
-    context.d3 = {};
+    context.d3 = Object.freeze(d3);
     context = Object.freeze(context);
     context = runScript(path.join('dist', author, plugin, 'globals', 'main.js'), context);
 

@@ -8,7 +8,9 @@
     "index.js"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && broccoli build dist",
+    "test": "mocha tests",
+    "dist": "npm build && npm test"
   },
   "author": "Ming Liu",
   "repository": "https://github.com/ming-codes/d3-plugins-dist.git",
@@ -19,8 +21,11 @@
     "broccoli-dist-es6-module": "^0.2.1",
     "broccoli-funnel": "^0.2.8",
     "broccoli-merge-trees": "^0.2.3",
+    "chai": "^3.2.0",
     "chalk": "^1.1.1",
-    "lodash": "^3.10.1"
+    "d3": "^3.5.6",
+    "lodash": "^3.10.1",
+    "mocha": "^2.3.2"
   },
   "keywords": [
     "d3-plugins",
