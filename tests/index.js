@@ -12,7 +12,7 @@ var cjs = require('./cjs');
 var es6 = require('./es6');
 
 $each(plugins, function (plugins, author) {
-  $each(plugins, function (plugin) {
+  $each(plugins, function (type, plugin) {
     describe(path.join(author, plugin), function () {
       describe('es6', es6(author, plugin));
       describe('cjs', cjs(author, plugin));

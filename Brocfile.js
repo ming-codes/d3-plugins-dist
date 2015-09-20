@@ -4,14 +4,16 @@ var dist = require('broccoli-dist-es6-module');
 var funnel = require('broccoli-funnel');
 var merge = require('broccoli-merge-trees');
 var path = require('path');
+
 var $reduce = require('lodash/collection/reduce');
+var $map = require('lodash/collection/map');
 
 var plugins = require('./index');
 
 var camelCase = require('./tests/utils').camelCase;
 
 module.exports = merge($reduce(plugins, function (accum, plugins, author) {
-  return accum.concat(plugins.map(function (plugin) {
+  return accum.concat($map(plugins, function (type, plugin) {
     return buildDistTree(author, plugin);
   }));
 }, []));
@@ -20,7 +22,7 @@ function buildDistTree(author, plugin) {
   var packageName = 'd3-plugins/' + author + '/' + plugin;
   var globalName = 'd3.plugins.' + camelCase(author) + '.' + camelCase(plugin);
 
-  var pluginBasePath = path.join('lib', author, plugin);
+  var pluginBasePath = path.join('vendor', author, plugin);
 
   var srcTree = funnel(pluginBasePath, {
     srcDir: '/',
