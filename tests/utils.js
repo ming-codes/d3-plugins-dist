@@ -10,6 +10,10 @@ module.exports.camelCase = function camelCase(str) {
   })).join('');
 };
 
+module.exports.readScript = function readScript(filePath) {
+  return fs.readFileSync(filePath, 'utf8');
+};
+
 module.exports.runScript = function runScript(filePath, context) {
   var scriptContent = fs.readFileSync(filePath, 'utf8');
 

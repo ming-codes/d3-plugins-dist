@@ -17,6 +17,7 @@
   "homepage": "https://github.com/ming-codes/d3-plugins-dist",
   "license": "MIT",
   "devDependencies": {
+    "babylon": "^5.8.23",
     "broccoli": "^0.16.7",
     "broccoli-dist-es6-module": "^0.2.1",
     "broccoli-funnel": "^0.2.8",
