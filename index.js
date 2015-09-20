@@ -6,8 +6,11 @@ module.exports = {
   'zjonsson': [ 'force-labels' ],
   'prcweb': [ 'circular-heat-chart' ],
   'deprecated': [ 'interpolate-zoom' ],
-  'emeeks': [ 'adjacency-matrix' ],
   'jasondavies': [ 'longscroll' ],
+  'emeeks': [
+    'adjacency-matrix',
+    'graph'
+  ],
   'mbostock': [
     'box',
     'bullet',
