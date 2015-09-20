@@ -22,10 +22,10 @@ module.exports = {
     'contour',
     'urlencode',
     'superformula',
+    'cubehelix'
   ],
 };
 //module.exports = [
-//  //cubehelix/ exports multiple
 //  //geo/
 //  //graph/
 //];
