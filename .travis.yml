@@ -14,7 +14,7 @@ matrix:
   fast_finish: true
 
 install:
-  - npm install -g broccoli
+  - npm install -g broccoli-cli
   - npm install -g mocha
   - npm install
 
