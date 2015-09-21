@@ -1,0 +1,22 @@
+---
+language: node_js
+
+node_js:
+  - "0.12"
+
+sudo: false
+
+cache:
+  directories:
+    - node_modules
+
+matrix:
+  fast_finish: true
+
+install:
+  - npm install -g bower
+  - npm install
+  - bower install
+
+script:
+  - broccoli build dist && mocha tests
