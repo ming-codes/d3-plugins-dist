@@ -1,7 +1,7 @@
 
 # d3-plugin-dist
 
-[![Build Status](https://travis-ci.org/ming-codes/d3-plugin-dist.svg?branch=master)](https://travis-ci.org/ming-codes/d3-plugin-dist)
+[![Build Status](https://travis-ci.org/ming-codes/d3-plugins-dist.svg?branch=master)](https://travis-ci.org/ming-codes/d3-plugins-dist)
 [![npm version](https://badge.fury.io/js/d3-plugins-dist.svg)](http://badge.fury.io/js/d3-plugins-dist)
 [![devDependency Status](https://david-dm.org/ming-codes/d3-plugins-dist/dev-status.svg)](https://david-dm.org/ming-codes/d3-plugins-dist#info=devDependencies)
 
