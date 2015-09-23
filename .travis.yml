@@ -19,5 +19,4 @@ install:
   - npm install
 
 script:
-  - broccoli build dist
-  - mocha tests
+  - make install

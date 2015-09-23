@@ -7,11 +7,6 @@
     "README.md",
     "index.js"
   ],
-  "scripts": {
-    "build": "rm -rf dist && broccoli build dist",
-    "test": "mocha tests",
-    "dist": "rm -rf dist && broccoli build dist && mocha tests"
-  },
   "author": "Ming Liu",
   "repository": "https://github.com/ming-codes/d3-plugins-dist.git",
   "homepage": "https://github.com/ming-codes/d3-plugins-dist",
