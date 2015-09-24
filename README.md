@@ -11,9 +11,9 @@ Plugins included in this repo will be distributed in:
 
 * ES6 module
 * Anonymous AMD
-* Named AMD `d3/plugins/*`
+* Named AMD `d3/plugins/<author>/<plugin>`
 * Common JS
-* Global `d3.plugins.*`
+* Global `d3.plugins.<author>.<plugin>`
 
 All plugins are hoisted inside the `d3.plugins` namespace to avoid conflict with `d3` itself.
 
