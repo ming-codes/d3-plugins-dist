@@ -26,6 +26,9 @@ module.exports = {
     'adjacency-matrix': 'vendor',
     'graph': 'vendor'
   },
+  'susielu': {
+    'd3-legend': 'vendor'
+  },
   'mbostock': {
     'box': 'vendor',
     'bullet': 'vendor',
