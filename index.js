@@ -20,7 +20,8 @@ module.exports = {
     'interpolate-zoom': 'vendor'
   },
   'jasondavies': {
-    'longscroll': 'vendor'
+    'longscroll': 'vendor',
+    'd3-parsets': 'vendor'
   },
   'emeeks': {
     'adjacency-matrix': 'vendor',
