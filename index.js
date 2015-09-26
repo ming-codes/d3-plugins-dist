@@ -25,7 +25,8 @@ module.exports = {
   },
   'emeeks': {
     'adjacency-matrix': 'vendor',
-    'graph': 'vendor'
+    'graph': 'vendor',
+    'orbit': 'vendor'
   },
   'susielu': {
     'd3-legend': 'vendor'
