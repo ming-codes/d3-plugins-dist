@@ -27,7 +27,7 @@ module.exports = function (author, plugin) {
       var name = args.pop() || file.replace(basedir, '.').replace(/\.js$/, '');
 
       describe(name, function () {
-        it(`should be passed 3 arguments`, function () {
+        it('should be passed 3 arguments', function () {
           expect(original).to.have.length(3);
         });
 
