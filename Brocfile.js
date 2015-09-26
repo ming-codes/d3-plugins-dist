@@ -26,11 +26,11 @@ function buildDistTree(author, plugin) {
 
   var srcTree = funnel(pluginBasePath, {
     srcDir: '/',
-    files: [ plugin + '.js', 'LICENSE' ]
+    files: [ '*.js', 'LICENSE' ]
   });
   var es6Tree = funnel(srcTree, {
     srcDir: '/',
-    files: [ plugin + '.js', 'LICENSE' ],
+    files: [ '*.js', 'LICENSE' ],
     destDir: 'es6'
   });
 

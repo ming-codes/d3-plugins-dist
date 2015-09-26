@@ -11,7 +11,7 @@ var runScript = require('./utils').runScript;
 module.exports = function (author, plugin) {
   return function () {
     var exports = {};
-    var require = function (dep) {
+    var requireModule = function (dep) {
       if (dep === 'd3') {
         return d3;
       }
@@ -19,10 +19,10 @@ module.exports = function (author, plugin) {
         return {};
       }
       else {
-        throw 'Unexpected dependency ' + dep;
+        return require(path.join(__dirname, '..', 'dist', author, plugin, 'cjs', dep));
       }
     };
-    var module = { exports: exports, require: require };
+    var module = { exports: exports, require: requireModule };
     var window = runScript(path.join('dist', author, plugin, 'cjs', plugin + '.js'), module);
 
     it('should export at least 1 item', function () {

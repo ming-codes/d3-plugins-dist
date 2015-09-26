@@ -44,6 +44,3 @@ module.exports = {
     'tile': 'vendor'
   },
 };
-//module.exports = [
-//  //geo/
-//];

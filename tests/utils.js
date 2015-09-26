@@ -1,6 +1,8 @@
 
+var path = require('path');
 var vm = require('vm');
 var fs = require('fs');
+var glob = require('glob');
 
 module.exports.camelCase = function camelCase(str) {
   var arr = str.split('-');
@@ -10,11 +12,13 @@ module.exports.camelCase = function camelCase(str) {
   })).join('');
 };
 
-module.exports.readScript = function readScript(filePath) {
+module.exports.readScript = readScript;
+function readScript(filePath) {
   return fs.readFileSync(filePath, 'utf8');
 };
 
-module.exports.runScript = function runScript(filePath, context) {
+module.exports.runScript = runScript;
+function runScript(filePath, context) {
   var scriptContent = fs.readFileSync(filePath, 'utf8');
 
   var script = new vm.Script(scriptContent);
@@ -25,4 +29,16 @@ module.exports.runScript = function runScript(filePath, context) {
   script.runInNewContext(context);
 
   return context;
+};
+
+module.exports.loadAMDModules = function load(basedir, define) {
+  var dir = path.join(basedir, '**', '*.js');
+
+  glob.sync(dir).forEach(function (file) {
+    runScript(file, {
+      define: function () {
+        define(Array.prototype.slice.call(arguments), file);
+      }
+    });
+  });
 };
