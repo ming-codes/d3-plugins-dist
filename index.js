@@ -35,6 +35,9 @@ module.exports = {
   'square': {
     'crossfilter': 'vendor'
   },
+  'riccardoscalco': {
+    'textures': 'vendor'
+  },
   'mbostock': {
     'box': 'vendor',
     'bullet': 'vendor',
