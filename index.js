@@ -50,6 +50,7 @@ module.exports = {
     'urlencode': 'vendor',
     'superformula': 'vendor',
     'cubehelix': 'vendor',
-    'tile': 'vendor'
+    'tile': 'vendor',
+    'topojson': 'vendor'
   },
 };
