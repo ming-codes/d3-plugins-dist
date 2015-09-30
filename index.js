@@ -32,6 +32,9 @@ module.exports = {
   'susielu': {
     'd3-legend': 'vendor'
   },
+  'square': {
+    'crossfilter': 'vendor'
+  },
   'mbostock': {
     'box': 'vendor',
     'bullet': 'vendor',
