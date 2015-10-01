@@ -86,27 +86,27 @@ function stitchArcs(topology, arcs) {
 function meshArcs(topology, o, filter) {
   var arcs = [];
 
+  function arc(i) {
+    var j = i < 0 ? ~i : i;
+    (geomsByArc[j] || (geomsByArc[j] = [])).push({i: i, g: geom});
+  }
+
+  function line(arcs) {
+    arcs.forEach(arc);
+  }
+
+  function polygon(arcs) {
+    arcs.forEach(line);
+  }
+
+  function geometry(o) {
+    if (o.type === "GeometryCollection") o.geometries.forEach(geometry);
+    else if (o.type in geometryType) geom = o, geometryType[o.type](o.arcs);
+  }
+
   if (arguments.length > 1) {
     var geomsByArc = [],
         geom;
-
-    function arc(i) {
-      var j = i < 0 ? ~i : i;
-      (geomsByArc[j] || (geomsByArc[j] = [])).push({i: i, g: geom});
-    }
-
-    function line(arcs) {
-      arcs.forEach(arc);
-    }
-
-    function polygon(arcs) {
-      arcs.forEach(line);
-    }
-
-    function geometry(o) {
-      if (o.type === "GeometryCollection") o.geometries.forEach(geometry);
-      else if (o.type in geometryType) geom = o, geometryType[o.type](o.arcs);
-    }
 
     var geometryType = {
       LineString: line,
