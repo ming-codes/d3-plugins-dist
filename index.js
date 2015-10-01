@@ -38,6 +38,9 @@ module.exports = {
   'riccardoscalco': {
     'textures': 'vendor'
   },
+  'adnan-wahab': {
+    'pathgl': 'vendor'
+  },
   'mbostock': {
     'box': 'vendor',
     'bullet': 'vendor',
