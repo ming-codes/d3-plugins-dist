@@ -7,6 +7,7 @@ var expect = chai.expect;
 var d3 = require('d3');
 
 var runScript = require('./utils').runScript;
+var globals = require('./utils').globals;
 
 module.exports = function (author, plugin) {
   return function () {
@@ -22,7 +23,7 @@ module.exports = function (author, plugin) {
         return require(path.join(__dirname, '..', 'dist', author, plugin, 'cjs', dep));
       }
     };
-    var module = { exports: exports, require: requireModule };
+    var module = globals({ exports: exports, require: requireModule });
     var window = runScript(path.join('dist', author, plugin, 'cjs', plugin + '.js'), module);
 
     it('should export at least 1 item', function () {

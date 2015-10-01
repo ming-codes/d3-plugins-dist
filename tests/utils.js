@@ -4,6 +4,21 @@ var vm = require('vm');
 var fs = require('fs');
 var glob = require('glob');
 
+var elements = [ 'HTMLCanvasElement' ];
+
+function makeCtor(name) {
+  return Function('return function ' + name + ' () {};')();
+}
+
+module.exports.globals = globals;
+function globals(context) {
+  elements.forEach(function (el) {
+    context[el] = makeCtor(el);
+  });
+
+  return context;
+};
+
 module.exports.camelCase = function camelCase(str) {
   var arr = str.split('-');
 
@@ -23,7 +38,7 @@ function runScript(filePath, context) {
 
   var script = new vm.Script(scriptContent);
 
-  context = context || {};
+  context = globals(context || {});
   context.window = context;
 
   script.runInNewContext(context);
@@ -35,10 +50,10 @@ module.exports.loadAMDModules = function load(basedir, define) {
   var dir = path.join(basedir, '**', '*.js');
 
   glob.sync(dir).forEach(function (file) {
-    runScript(file, {
+    runScript(file, globals({
       define: function () {
         define(Array.prototype.slice.call(arguments), file);
       }
-    });
+    }));
   });
 };

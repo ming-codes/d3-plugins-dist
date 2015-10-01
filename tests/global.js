@@ -1,6 +1,4 @@
 
-var plugins = require('../index');
-
 var path = require('path');
 
 var chai = require('chai');
@@ -12,6 +10,10 @@ var camelCase = require('./utils').camelCase;
 var runScript = require('./utils').runScript;
 
 var d3props = Object.keys(d3);
+
+var globals = Object.keys(require('./utils').globals({ window: '', d3: '' }));
+
+var plugins = Object.keys(require('../index')).map(camelCase);
 
 module.exports = function (author, plugin) {
   var namespace = 'd3.plugins.' + camelCase(author) + '.' + camelCase(plugin);
@@ -31,7 +33,7 @@ module.exports = function (author, plugin) {
 
     it('should not corrupt global namespace', function () {
       expect(context)
-        .to.have.all.keys([ 'window', 'd3' ]);
+        .to.have.all.keys(globals);
     });
 
     it('should not corrupt d3 namespace', function () {
@@ -40,9 +42,9 @@ module.exports = function (author, plugin) {
         .to.have.all.keys(d3props.concat('plugins'));
     });
 
-    it('should not corrupt ' + author + ' namespace', function () {
+    it('should not corrupt ' + camelCase(author) + ' namespace', function () {
       expect(context.d3.plugins)
-        .to.have.all.keys(Object.keys(plugins));
+        .to.have.all.keys(plugins);
     });
   };
 }
