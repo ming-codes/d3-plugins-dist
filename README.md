@@ -17,6 +17,60 @@ Plugins included in this repo will be distributed in:
 
 All plugins are hoisted inside the `d3.plugins` namespace to avoid conflict with `d3` itself.
 
+# List of Plugins
+
+This is not an exhaustive list. New plugins may be added more often than this readme gets updated.
+
+```
+dist
+├── adnan-wahab
+│   └── pathgl
+├── deprecated
+│   └── interpolate-zoom
+├── emeeks
+│   ├── adjacency-matrix
+│   ├── graph
+│   ├── orbit
+│   └── timeline
+├── jasondavies
+│   ├── d3-parsets
+│   └── longscroll
+├── larskotthoff
+│   └── chernoff
+├── mbostock
+│   ├── box
+│   ├── bullet
+│   ├── contour
+│   ├── cubehelix
+│   ├── fisheye
+│   ├── geodesic
+│   ├── hexbin
+│   ├── hive
+│   ├── horizon
+│   ├── qq
+│   ├── rollup
+│   ├── sankey
+│   ├── superformula
+│   ├── tile
+│   ├── topojson
+│   └── urlencode
+├── prcweb
+│   └── circular-heat-chart
+├── riccardoscalco
+│   └── textures
+├── skokenes
+│   └── lasso
+├── square
+│   └── crossfilter
+├── susielu
+│   └── d3-legend
+├── tmcw
+│   ├── jsonp
+│   └── keybinding
+└── zjonsson
+    └── force-labels
+```
+
 # Contributing
 
 If you found bug in any of the plugins, please open issue in the original plugin's repo
