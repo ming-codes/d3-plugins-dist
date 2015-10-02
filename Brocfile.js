@@ -19,7 +19,7 @@ module.exports = merge($reduce(plugins, function (accum, plugins, author) {
 }, []));
 
 function buildDistTree(author, plugin) {
-  var packageName = 'd3-plugins/' + author + '/' + plugin;
+  var packageName = 'd3/plugins/' + author + '/' + plugin;
   var globalName = 'd3.plugins.' + camelCase(author) + '.' + camelCase(plugin);
 
   var pluginBasePath = path.join('vendor', author, plugin);

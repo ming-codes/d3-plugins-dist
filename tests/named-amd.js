@@ -12,7 +12,7 @@ var load = require('./utils').loadAMDModules;
 
 module.exports = function (author, plugin) {
   var basedir = path.join(__dirname, '..', 'dist', author, plugin, 'named-amd');
-  var namespace = 'd3-plugins/' + author + '/' + plugin;
+  var namespace = 'd3/plugins/' + author + '/' + plugin;
 
   return function () {
     var modules = [];
