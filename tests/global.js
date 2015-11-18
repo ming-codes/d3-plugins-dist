@@ -13,7 +13,11 @@ var d3props = Object.keys(d3);
 
 var globals = Object.keys(require('./utils').globals({ window: '', d3: '' }));
 
-var plugins = Object.keys(require('../index')).map(camelCase);
+var authors = Object.keys(require('../index').reduce(function (index, plugin) {
+  index[camelCase(plugin.author)] = plugin;
+
+  return index;
+}, {}));
 
 module.exports = function (author, plugin) {
   var namespace = 'd3.plugins.' + camelCase(author) + '.' + camelCase(plugin);
@@ -44,7 +48,7 @@ module.exports = function (author, plugin) {
 
     it('should not corrupt ' + camelCase(author) + ' namespace', function () {
       expect(context.d3.plugins)
-        .to.have.all.keys(plugins);
+        .to.have.all.keys(authors);
     });
   };
 }
