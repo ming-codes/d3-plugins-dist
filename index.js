@@ -61,7 +61,7 @@ Plugin.prototype.toTree = function toTree() {
 
   var distTree = dist(srcTree, {
     // the entry script, and module that becomes the global
-    main: plugin,
+    main: 'index',
 
     // will become window.ic.ajax with the exports from `main`
     global: globalName,

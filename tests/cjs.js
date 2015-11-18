@@ -24,7 +24,7 @@ module.exports = function (author, plugin) {
       }
     };
     var module = globals({ exports: exports, require: requireModule });
-    var window = runScript(path.join('dist', author, plugin, 'cjs', plugin + '.js'), module);
+    var window = runScript(path.join('dist', author, plugin, 'cjs', 'index.js'), module);
 
     it('should export at least 1 item', function () {
       expect(Object.keys(exports)).to.have.length.above(0);

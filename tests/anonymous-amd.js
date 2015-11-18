@@ -15,7 +15,7 @@ module.exports = function (author, plugin) {
 
   return function () {
     var modules = [];
-    var main = path.join(basedir, plugin + '.js');
+    var main = path.join(basedir, 'index.js');
 
     modules.seen = { d3: d3 };
     modules.index = {};
