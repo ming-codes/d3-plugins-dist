@@ -88,6 +88,7 @@ module.exports = Plugin.fromIndex({
   'deprecated':       [ 'interpolate-zoom' ],
   'jasondavies':      [ 'longscroll', 'parsets' ],
   'emeeks':           [ 'adjacency-matrix', 'graph', 'orbit', 'timeline', 'legend', 'arc-diagram', 'circular-brush' ],
+  'klortho':          [ 'flex-tree' ],
   'susielu':          [ 'legend' ],
   'square':           [ 'crossfilter' ],
   'riccardoscalco':   [ 'textures' ],
