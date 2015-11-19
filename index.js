@@ -87,7 +87,7 @@ module.exports = Plugin.fromIndex({
   'prcweb':           [ 'circular-heat-chart' ],
   'deprecated':       [ 'interpolate-zoom' ],
   'jasondavies':      [ 'longscroll', 'parsets' ],
-  'emeeks':           [ 'adjacency-matrix', 'graph', 'orbit', 'timeline', 'legend', 'circular-brush', 'ribbon' ],
+  'emeeks':           [ 'adjacency-matrix', 'graph', 'orbit', 'timeline', 'legend', 'circular-brush', 'ribbon', 'sketchy' ],
   'klortho':          [ 'flex-tree' ],
   'susielu':          [ 'legend' ],
   'square':           [ 'crossfilter' ],
