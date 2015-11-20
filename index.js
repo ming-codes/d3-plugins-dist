@@ -1,32 +1,7 @@
 
 var path = require('path');
 
-var camelCase = require('./tests/utils').camelCase;
-
-function Plugin(author, plugin) {
-  this.name = plugin;
-  this.author = author;
-
-  this.packageName = 'd3/plugins/' + author + '/' + plugin;
-  this.globalName = 'd3.plugins.' + camelCase(author) + '.' + camelCase(plugin);
-  this.basePath = path.join('vendor', author, plugin);
-}
-
-Plugin.fromIndex = function (index) {
-  var trees = [];
-
-  for (var author in index) {
-    var plugins = index[author];
-
-    plugins.forEach(function (plugin) {
-      trees = trees.concat(new Plugin(author, plugin));
-    });
-  }
-
-  return trees;
-};
-
-module.exports = Plugin.fromIndex({
+var plugins = expand({
   'larskotthoff':     [ 'chernoff' ],
   'skokenes':         [ 'lasso' ],
   'tmcw':             [ 'jsonp', 'keybinding' ],
@@ -59,3 +34,51 @@ module.exports = Plugin.fromIndex({
     'topojson'
   ],
 });
+
+function Plugin(author, plugin) {
+  this.name = plugin;
+  this.author = author;
+}
+
+Plugin.prototype.pathFor = function (format) {
+  return path.join(this.author, this.name, format, fileNameFor(format));
+};
+
+Plugin.prototype.absolutePathFor = function (format) {
+  return path.join(__dirname, 'dist', this.author, this.name, format, fileNameFor(format));
+};
+
+function fileNameFor(format) {
+  switch (format) {
+    case 'amd': case 'cjs': case 'es6': return 'index.js';
+    case 'globals': case 'named-amd': return 'main.js';
+    default: throw new TypeError('Expected amd, cjs, es6, globals, or named-amd as format');
+  }
+}
+
+function expand(index) {
+  var trees = [];
+  var lookup = {};
+
+  for (var author in index) {
+    var plugins = index[author];
+
+    lookup[author] = lookup[author] || {};
+
+    plugins.forEach(function (plugin) {
+      trees.push(lookup[author][plugin] = new Plugin(author, plugin));
+    });
+  }
+
+  trees.lookup = function (author, plugin) {
+    return lookup[author][plugin];
+  };
+
+  trees.toTree = function () {
+    return path.join(__dirname, 'dist');
+  };
+
+  return trees;
+};
+
+module.exports = plugins;

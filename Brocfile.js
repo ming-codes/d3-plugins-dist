@@ -5,15 +5,18 @@ var chalk = require('chalk');
 var dist = require('broccoli-dist-es6-module');
 var funnel = require('broccoli-funnel');
 var merge = require('broccoli-merge-trees');
+
 var plugins = require('./index');
+var camelCase = require('./tests/utils').camelCase;
 
 function makeTree(plugin) {
   var name = plugin.name;
   var author = plugin.author;
-  var packageName = plugin.packageName;
-  var globalName = plugin.globalName;
 
-  var pluginBasePath = plugin.basePath;
+  var packageName = 'd3/plugins/' + author + '/' + name;
+  var globalName = 'd3.plugins.' + camelCase(author) + '.' + camelCase(name);
+
+  var pluginBasePath = path.join('vendor', author, name);
 
   var srcTree = funnel(pluginBasePath, {
     srcDir: '/',
@@ -47,13 +50,17 @@ function makeTree(plugin) {
 
 module.exports = merge([].concat(plugins.map(function (plugin) {
   var prefix = ' ' + chalk.green('ok') + ' ';
+  var name = plugin.name;
+  var author = plugin.author;
+  var packageName = 'd3/plugins/' + author + '/' + name;
+  var globalName = 'd3.plugins.' + camelCase(author) + '.' + camelCase(name);
 
-  console.log(chalk.underline(plugin.author + '/' + plugin.name));
+  console.log(chalk.underline(author + '/' + name));
   console.log(prefix + 'es6');
   console.log(prefix + 'cjs');
   console.log(prefix + 'anonymous-amd');
-  console.log(prefix + 'named-amd -> ' + plugin.packageName);
-  console.log(prefix + 'global -> ' + plugin.globalName);
+  console.log(prefix + 'named-amd -> ' + packageName);
+  console.log(prefix + 'global -> ' + globalName);
 
   return makeTree(plugin);
 })));
