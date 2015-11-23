@@ -9,3 +9,6 @@ install:
 	-rm -rf dist
 	broccoli build dist
 	mocha tests
+
+test:
+	mocha tests
