@@ -1,6 +1,6 @@
 import d3 from 'd3';
 
-export default function graph(graph) {
+export default function (graph) {
   var graph = graph ? graph : {},
       nodes = [],
       links = [];
