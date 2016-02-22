@@ -33,7 +33,8 @@ dist
 │   ├── orbit
 │   └── timeline
 ├── jasondavies
-│   ├── d3-parsets
+│   ├── cloud
+│   ├── parsets
 │   └── longscroll
 ├── larskotthoff
 │   └── chernoff
@@ -63,7 +64,7 @@ dist
 ├── square
 │   └── crossfilter
 ├── susielu
-│   └── d3-legend
+│   └── legend
 ├── tmcw
 │   ├── jsonp
 │   └── keybinding

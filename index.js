@@ -8,7 +8,7 @@ var plugins = expand({
   'zjonsson':         [ 'force-labels' ],
   'prcweb':           [ 'circular-heat-chart' ],
   'deprecated':       [ 'interpolate-zoom' ],
-  'jasondavies':      [ 'longscroll', 'parsets' ],
+  'jasondavies':      [ 'cloud', 'longscroll', 'parsets' ],
   'emeeks':           [ 'adjacency-matrix', 'graph', 'orbit', 'timeline', 'legend', 'circular-brush', 'ribbon', 'sketchy' ],
   'klortho':          [ 'flex-tree' ],
   'susielu':          [ 'legend' ],

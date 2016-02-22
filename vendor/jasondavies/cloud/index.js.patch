@@ -1,0 +1,28 @@
+--- index.js.1	2016-02-21 10:03:22.000000000 -0600
++++ index.js	2016-02-21 10:02:28.000000000 -0600
+@@ -1,13 +1,13 @@
++import d3 from 'd3';
++
+ // Word cloud layout by Jason Davies, https://www.jasondavies.com/wordcloud/
+ // Algorithm due to Jonathan Feinberg, http://static.mrfeinberg.com/bv_ch03.pdf
+ 
+-var dispatch = require("d3-dispatch").dispatch;
+-
+ var cloudRadians = Math.PI / 180,
+     cw = 1 << 11 >> 5,
+     ch = 1 << 11;
+ 
+-module.exports = function() {
++export default function() {
+   var size = [256, 256],
+       text = cloudText,
+       font = cloudFont,
+@@ -19,7 +19,7 @@
+       spiral = archimedeanSpiral,
+       words = [],
+       timeInterval = Infinity,
+-      event = dispatch("word", "end"),
++      event = d3.dispatch("word", "end"),
+       timer = null,
+       random = Math.random,
+       cloud = {},
